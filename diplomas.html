@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Дипломы и сертификаты — Ева</title>
+<meta name="description" content="Подтверждённая квалификация психолога и сексолога Евы. Высшее образование, профессиональная переподготовка, лицензии.">
+<meta name="theme-color" content="#FAF6F0">
+<meta property="og:title" content="Дипломы и сертификаты — Ева">
+<meta property="og:description" content="Подтверждённая квалификация психолога и сексолога">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg-primary:#FAF6F0;--bg-secondary:#F5EFE6;--bg-footer:#2C2419;
+--card:#FFFFFF;--card-hover:#FFFDF9;--card-border:rgba(201,150,58,0.20);
+--gold:#C9963A;--gold-bright:#D4A853;--gold-light:rgba(201,150,58,0.12);
+--text-primary:#2C2419;--text-secondary:#6B5E4F;--text-tertiary:#A89885;--text-cream:#F0E6D3;
+--shadow:rgba(44,36,25,0.06);--shadow-hover:rgba(44,36,25,0.10);
+--font-display:'Playfair Display',serif;--font-body:'Inter',sans-serif;
+--transition-smooth:cubic-bezier(0.16,1,0.3,1);
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--bg-primary);color:var(--text-primary);line-height:1.7;-webkit-font-smoothing:antialiased}
+::selection{background:rgba(201,150,58,0.25)}
+.container{max-width:1100px;margin:0 auto;padding:0 32px}
+
+/* ==================== NAV ==================== */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:20px 0;transition:all .4s var(--transition-smooth)}
+.nav.scrolled{background:rgba(250,246,240,.92);backdrop-filter:blur(20px);box-shadow:0 2px 20px rgba(44,36,25,.06)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1280px;margin:0 auto;padding:0 32px}
+.logo{font-family:var(--font-display);font-size:24px;font-weight:600;color:var(--gold);text-decoration:none;letter-spacing:.05em}
+.logo span{font-family:var(--font-body);font-size:10px;font-weight:500;color:var(--text-tertiary);letter-spacing:.2em;text-transform:uppercase;display:block;margin-top:-4px}
+.nav-links{display:flex;list-style:none;gap:36px;align-items:center}
+.nav-links a{font-size:12px;font-weight:500;color:var(--text-secondary);text-decoration:none;letter-spacing:.1em;text-transform:uppercase;transition:color .3s;position:relative}
+.nav-links a:hover,.nav-links a.active{color:var(--gold)}
+.nav-links a.active::after{content:'';position:absolute;bottom:-6px;left:0;right:0;height:2px;background:var(--gold);border-radius:1px}
+.nav-cta{font-size:11px;font-weight:600;color:var(--text-primary);background:var(--gold-gradient);padding:12px 28px;text-decoration:none;letter-spacing:.12em;text-transform:uppercase;transition:all .3s;border:none;cursor:pointer}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,150,58,.3)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;z-index:1001}
+.hamburger span{width:24px;height:2px;background:var(--text-primary);transition:all .3s}
+.mobile-menu{position:fixed;inset:0;background:var(--bg-primary);z-index:999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:32px;opacity:0;pointer-events:none;transition:opacity .4s}
+.mobile-menu.active{opacity:1;pointer-events:all}
+.mobile-menu a{font-family:var(--font-display);font-size:28px;color:var(--text-primary);text-decoration:none;transition:color .3s}
+.mobile-menu a:hover,.mobile-menu a.active{color:var(--gold)}
+.mobile-close{position:absolute;top:24px;right:24px;font-size:32px;color:var(--text-primary);cursor:pointer;background:none;border:none}
+
+/* ==================== HERO MINI ==================== */
+.hero-mini{height:45vh;min-height:320px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;margin-top:72px}
+.hero-mini-bg{position:absolute;inset:0;background:url('./hero-bg.png') center/cover no-repeat}
+.hero-mini-overlay{position:absolute;inset:0;background:rgba(10,10,15,.55)}
+.hero-mini-content{position:relative;z-index:2;text-align:center;padding:40px 24px 0}
+.hero-mini-label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.25em;color:var(--gold-bright);margin-bottom:16px;display:block}
+.hero-mini h1{font-family:var(--font-display);font-size:48px;font-weight:600;color:var(--text-cream);margin-bottom:12px}
+.hero-mini p{font-size:16px;color:rgba(240,230,211,.8);max-width:500px;margin:0 auto 24px}
+.back-link{display:inline-flex;align-items:center;gap:8px;color:var(--gold-bright);text-decoration:none;font-size:13px;letter-spacing:.1em;text-transform:uppercase;transition:color .3s}
+.back-link:hover{color:#fff}
+.back-link svg{width:16px;height:16px}
+
+/* ==================== DIPLOMAS GALLERY ==================== */
+.gallery{padding:80px 0 120px}
+.gallery-header{text-align:center;margin-bottom:60px}
+.gallery-header h2{font-family:var(--font-display);font-size:36px;font-weight:500;color:var(--text-primary);margin-bottom:12px}
+.gallery-header p{font-size:16px;color:var(--text-secondary)}
+.gallery-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.gallery-item{cursor:pointer;group:border-radius:16px;overflow:hidden;background:var(--card);border:1px solid var(--card-border);transition:all .4s var(--transition-smooth)}
+.gallery-item:hover{transform:translateY(-8px);box-shadow:0 24px 60px var(--shadow-hover);border-color:var(--gold)}
+.gallery-img-wrap{position:relative;overflow:hidden;background:var(--bg-secondary)}
+.gallery-img-wrap::before{content:'';display:block;padding-top:75%}
+.gallery-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s var(--transition-smooth)}
+.gallery-item:hover .gallery-img{transform:scale(1.04)}
+.gallery-zoom{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(44,36,25,.4);opacity:0;transition:opacity .3s}
+.gallery-item:hover .gallery-zoom{opacity:1}
+.gallery-zoom svg{width:40px;height:40px;stroke:#fff;stroke-width:1.5;fill:none}
+.gallery-info{padding:28px 32px}
+.gallery-info h3{font-family:var(--font-display);font-size:22px;font-weight:500;color:var(--text-primary);margin-bottom:8px}
+.gallery-info p{font-size:14px;color:var(--text-secondary);line-height:1.6}
+
+/* ==================== LIGHTBOX ==================== */
+.lightbox{position:fixed;inset:0;z-index:2000;background:rgba(10,10,15,.92);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .35s ease}
+.lightbox.active{opacity:1;pointer-events:all}
+.lightbox-img-wrap{position:relative;max-width:90vw;max-height:85vh;display:flex;flex-direction:column;align-items:center;transform:scale(.92);transition:transform .35s var(--transition-smooth)}
+.lightbox.active .lightbox-img-wrap{transform:scale(1)}
+.lightbox-img{max-width:100%;max-height:78vh;object-fit:contain;border-radius:8px;box-shadow:0 24px 80px rgba(0,0,0,.4)}
+.lightbox-caption{margin-top:16px;font-size:15px;color:var(--text-cream);text-align:center;font-family:var(--font-body)}
+.lightbox-close{position:absolute;top:24px;right:24px;width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.1);border:none;border-radius:50%;cursor:pointer;transition:background .3s;z-index:2001}
+.lightbox-close:hover{background:rgba(255,255,255,.2)}
+.lightbox-close svg{width:20px;height:20px;stroke:#fff;stroke-width:2}
+.lightbox-arrow{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.1);border:none;border-radius:50%;cursor:pointer;transition:background .3s;z-index:2001}
+.lightbox-arrow:hover{background:rgba(255,255,255,.2)}
+.lightbox-arrow svg{width:20px;height:20px;stroke:#fff;stroke-width:2;fill:none}
+.lightbox-arrow.prev{left:24px}
+.lightbox-arrow.next{right:24px}
+
+/* ==================== FOOTER ==================== */
+.footer{background:var(--bg-footer);color:var(--text-cream);padding:60px 0 32px;margin-top:0}
+.footer-inner{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:40px;margin-bottom:40px}
+.footer-logo{font-family:var(--font-display);font-size:24px;font-weight:600;color:var(--gold);text-decoration:none}
+.footer-logo span{font-family:var(--font-body);font-size:10px;font-weight:500;color:var(--text-tertiary);letter-spacing:.2em;text-transform:uppercase;display:block;margin-top:-4px}
+.footer-col h4{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.15em;color:var(--text-tertiary);margin-bottom:16px}
+.footer-col a{display:block;color:rgba(240,230,211,.7);text-decoration:none;font-size:14px;margin-bottom:10px;transition:color .3s}
+.footer-col a:hover{color:var(--gold-bright)}
+.footer-bottom{border-top:1px solid rgba(240,230,211,.1);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.footer-bottom p{font-size:12px;color:rgba(240,230,211,.5)}
+
+/* ==================== ANIMATIONS ==================== */
+.reveal{opacity:0;transform:translateY(30px);transition:all .7s var(--transition-smooth)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.stagger-1{transition-delay:.1s}.stagger-2{transition-delay:.2s}.stagger-3{transition-delay:.3s}.stagger-4{transition-delay:.4s}
+
+/* ==================== RESPONSIVE ==================== */
+@media(max-width:1024px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .gallery-grid{gap:28px}
+}
+@media(max-width:768px){
+  .container{padding:0 20px}
+  .hero-mini h1{font-size:32px}
+  .hero-mini{height:38vh;min-height:280px;margin-top:80px}
+  .hero-mini-content{padding-top:20px}
+  .gallery-grid{grid-template-columns:1fr;gap:24px}
+  .gallery-info{padding:22px 24px}
+  .lightbox-arrow{display:none}
+  .footer-inner{flex-direction:column;gap:32px}
+  .nav-cta{padding:10px 20px;font-size:10px}
+}
+</style>
+</head>
+<body>
+
+<!-- ==================== NAV ==================== -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="./index.html" class="logo">ЕВА<span>ПСИХОЛОГ · СЕКСОЛОГ</span></a>
+    <ul class="nav-links">
+      <li><a href="./index.html#about">Обо мне</a></li>
+      <li><a href="./diplomas.html" class="active">Дипломы</a></li>
+      <li><a href="./index.html#services">Услуги</a></li>
+      <li><a href="./index.html#testimonials">Отзывы</a></li>
+      <li><a href="./index.html#faq">FAQ</a></li>
+      <li><a href="./index.html#contact">Контакты</a></li>
+      <li><a href="./index.html#contact" class="nav-cta">Записаться</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">&times;</button>
+  <a href="./index.html#about">Обо мне</a>
+  <a href="./diplomas.html" class="active">Дипломы</a>
+  <a href="./index.html#services">Услуги</a>
+  <a href="./index.html#testimonials">Отзывы</a>
+  <a href="./index.html#faq">FAQ</a>
+  <a href="./index.html#contact">Контакты</a>
+</div>
+
+<!-- ==================== HERO MINI ==================== -->
+<section class="hero-mini">
+  <div class="hero-mini-bg"></div>
+  <div class="hero-mini-overlay"></div>
+  <div class="hero-mini-content">
+    <span class="hero-mini-label reveal">Образование</span>
+    <h1 class="reveal stagger-1">Дипломы и сертификаты</h1>
+    <p class="reveal stagger-2">Подтверждённая квалификация — высшее образование и профессиональная переподготовка</p>
+    <a href="./index.html" class="back-link reveal stagger-3">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Вернуться на главную
+    </a>
+  </div>
+</section>
+
+<!-- ==================== GALLERY ==================== -->
+<section class="gallery">
+  <div class="container">
+    <div class="gallery-header reveal">
+      <h2>Квалификация</h2>
+      <p>Все документы доступны для проверки при первой встрече</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item reveal stagger-1" onclick="openLightbox(0)">
+        <div class="gallery-img-wrap">
+          <img src="./diploma-1.jpg" alt="Высшее психологическое образование" class="gallery-img" loading="lazy">
+          <div class="gallery-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M11 8v6M8 11h6"/></svg></div>
+        </div>
+        <div class="gallery-info">
+          <h3>Высшее психологическое образование</h3>
+          <p>Казахский Национальный Университет им. аль-Фараби. Специальность: психология.</p>
+        </div>
+      </div>
+      <div class="gallery-item reveal stagger-2" onclick="openLightbox(1)">
+        <div class="gallery-img-wrap">
+          <img src="./diploma-2.jpg" alt="Профессиональная переподготовка" class="gallery-img" loading="lazy">
+          <div class="gallery-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M11 8v6M8 11h6"/></svg></div>
+        </div>
+        <div class="gallery-info">
+          <h3>Профессиональная переподготовка</h3>
+          <p>Психолог-консультант. Психологическое консультирование населения. 256 часов.</p>
+        </div>
+      </div>
+      <div class="gallery-item reveal stagger-3" onclick="openLightbox(2)">
+        <div class="gallery-img-wrap">
+          <img src="./diploma-3.jpg" alt="Диплом Республики Казахстан" class="gallery-img" loading="lazy">
+          <div class="gallery-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M11 8v6M8 11h6"/></svg></div>
+        </div>
+        <div class="gallery-info">
+          <h3>Диплом Республики Казахстан</h3>
+          <p>Государственная лицензия. Установленного образца.</p>
+        </div>
+      </div>
+      <div class="gallery-item reveal stagger-4" onclick="openLightbox(3)">
+        <div class="gallery-img-wrap">
+          <img src="./diploma-4.jpg" alt="Дополнительное образование" class="gallery-img" loading="lazy">
+          <div class="gallery-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M11 8v6M8 11h6"/></svg></div>
+        </div>
+        <div class="gallery-info">
+          <h3>Дополнительное образование</h3>
+          <p>Российская Федерация. Профессиональная переподготовка.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== LIGHTBOX ==================== -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">
+    <svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>
+  </button>
+  <button class="lightbox-arrow prev" onclick="changeLightbox(-1)">
+    <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+  </button>
+  <button class="lightbox-arrow next" onclick="changeLightbox(1)">
+    <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+  </button>
+  <div class="lightbox-img-wrap">
+    <img src="" alt="" class="lightbox-img" id="lightboxImg">
+    <p class="lightbox-caption" id="lightboxCaption"></p>
+  </div>
+</div>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <a href="./index.html" class="footer-logo">ЕВА<span>ПСИХОЛОГ · СЕКСОЛОГ</span></a>
+      </div>
+      <div class="footer-col">
+        <h4>Навигация</h4>
+        <a href="./index.html#about">Обо мне</a>
+        <a href="./index.html#services">Услуги</a>
+        <a href="./index.html#testimonials">Отзывы</a>
+        <a href="./index.html#faq">FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h4>Контакты</h4>
+        <a href="https://t.me/eva.love.coach" target="_blank">Telegram</a>
+        <a href="https://instagram.com/eva.love.coach" target="_blank">Instagram</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Ева. Все права защищены.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ==================== NAV SCROLL ====================
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{if(window.scrollY>80)nav.classList.add('scrolled');else nav.classList.remove('scrolled')});
+
+// ==================== MOBILE MENU ====================
+const hamburger=document.getElementById('hamburger');
+const mobileMenu=document.getElementById('mobileMenu');
+const mobileClose=document.getElementById('mobileClose');
+hamburger.addEventListener('click',()=>mobileMenu.classList.add('active'));
+mobileClose.addEventListener('click',()=>mobileMenu.classList.remove('active'));
+document.querySelectorAll('.mobile-menu a').forEach(a=>a.addEventListener('click',()=>mobileMenu.classList.remove('active')));
+
+// ==================== LIGHTBOX ====================
+const lightboxData=[
+  {src:'./diploma-1.jpg',title:'Высшее психологическое образование',desc:'КазНУ им. аль-Фараби. Специальность: психология.'},
+  {src:'./diploma-2.jpg',title:'Профессиональная переподготовка',desc:'Психолог-консультант. 256 часов.'},
+  {src:'./diploma-3.jpg',title:'Диплом Республики Казахстан',desc:'Государственная лицензия.'},
+  {src:'./diploma-4.jpg',title:'Дополнительное образование',desc:'Российская Федерация. Профессиональная переподготовка.'}
+];
+let lightboxIndex=0;
+const lightbox=document.getElementById('lightbox');
+const lightboxImg=document.getElementById('lightboxImg');
+const lightboxCaption=document.getElementById('lightboxCaption');
+function openLightbox(index){lightboxIndex=index;lightboxImg.src=lightboxData[index].src;lightboxCaption.textContent=lightboxData[index].title;lightbox.classList.add('active');document.body.style.overflow='hidden'}
+function closeLightbox(){lightbox.classList.remove('active');document.body.style.overflow=''}
+function changeLightbox(dir){lightboxIndex=(lightboxIndex+dir+lightboxData.length)%lightboxData.length;lightboxImg.src=lightboxData[lightboxIndex].src;lightboxCaption.textContent=lightboxData[lightboxIndex].title}
+lightbox.addEventListener('click',(e)=>{if(e.target===lightbox)closeLightbox()});
+document.addEventListener('keydown',(e)=>{if(e.key==='Escape')closeLightbox();if(e.key==='ArrowLeft')changeLightbox(-1);if(e.key==='ArrowRight')changeLightbox(1)});
+
+// ==================== SCROLL REVEAL ====================
+const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
