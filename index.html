@@ -2247,7 +2247,6 @@ function animateParticles() {
       if (dist < 100) {
         const alpha = (1 - dist / 100) * 0.05;
         ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.moveTo(particles[i].x, particles[i].y);
         ctx.lineTo(particles[j].x, particles[j].y);
         ctx.strokeStyle = `rgba(201, 150, 58, ${alpha})`;
