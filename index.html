@@ -312,7 +312,8 @@ img { max-width: 100%; display: block; }
 }
 
 @media (max-width: 768px) {
-  .nav-links, .nav-cta { display: none; }
+  .nav-links, .nav-inner > .nav-cta { display: none; }
+  .mobile-menu .nav-cta { display: inline-block; }
   .hamburger { display: flex; }
 }
 
@@ -643,6 +644,16 @@ img { max-width: 100%; display: block; }
   color: var(--text-secondary);
   margin-bottom: 32px;
 }
+.about-online {
+  margin-top: -16px;
+}
+.about-online a {
+  color: var(--gold);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.3s ease;
+}
+.about-online a:hover { color: var(--text-primary); }
 .about-credentials {
   display: flex;
   flex-wrap: wrap;
@@ -814,6 +825,11 @@ img { max-width: 100%; display: block; }
   background: var(--card-hover);
   transform: translateX(8px);
   box-shadow: 0 8px 30px var(--shadow-hover);
+}
+a.service-card {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
 }
 .service-icon {
   width: 44px;
@@ -1598,6 +1614,7 @@ img { max-width: 100%; display: block; }
       <li><a href="#about">Обо мне</a></li>
       <li><a href="./diplomas.html">Дипломы</a></li>
       <li><a href="./blog.html">Блог</a></li>
+      <li><a href="./vopros.html">Вопрос</a></li>
       <li><a href="#services">Услуги</a></li>
       <li><a href="#testimonials">Отзывы</a></li>
       <li><a href="#faq">FAQ</a></li>
@@ -1617,6 +1634,7 @@ img { max-width: 100%; display: block; }
     <a href="#about" class="mobile-link">Обо мне</a>
     <a href="./diplomas.html" class="mobile-link">Дипломы</a>
     <a href="./blog.html" class="mobile-link">Блог</a>
+    <a href="./vopros.html" class="mobile-link">Вопрос</a>
     <a href="#services" class="mobile-link">Услуги</a>
     <a href="#testimonials" class="mobile-link">Отзывы</a>
     <a href="#faq" class="mobile-link">FAQ</a>
@@ -1694,6 +1712,7 @@ img { max-width: 100%; display: block; }
       <span class="about-label">Обо мне</span>
       <h2>Разбираемся вместе — бережно и по делу</h2>
       <p class="about-text">Меня зовут Ева. Я практикующий психолог и сексолог. Помогаю людям разобраться в отношениях, сексуальности, тревоге, самооценке и построить счастливую личную жизнь. Работаю индивидуально с женщинами, мужчинами, а также с парами — очно и в формате видеоконсультаций.</p>
+      <p class="about-text about-online">Работаю онлайн с клиентами из любой страны — <a href="./za-granitsey.html">подробнее для русскоязычных за границей</a></p>
       <div class="about-credentials">
         <span class="about-credential">Высшее психологическое образование</span>
         <span class="about-credential-sep"></span>
@@ -1791,7 +1810,7 @@ img { max-width: 100%; display: block; }
         </div>
         <span class="service-badge">50 минут</span>
       </div>
-      <div class="service-card reveal stagger-2">
+      <a href="./dlya-par.html" class="service-card reveal stagger-2">
         <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
           <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
           <circle cx="9" cy="7" r="4"/>
@@ -1803,8 +1822,8 @@ img { max-width: 100%; display: block; }
           <p>Совместная работа над близостью</p>
         </div>
         <span class="service-badge">90 минут</span>
-      </div>
-      <div class="service-card reveal stagger-3">
+      </a>
+      <a href="./za-granitsey.html" class="service-card reveal stagger-3">
         <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
           <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
           <line x1="8" y1="21" x2="16" y2="21"/>
@@ -1815,7 +1834,7 @@ img { max-width: 100%; display: block; }
           <p>Видеовстречи из любой точки мира</p>
         </div>
         <span class="service-badge">Worldwide</span>
-      </div>
+      </a>
       <div class="service-card reveal stagger-4">
         <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="12" cy="12" r="10"/>
@@ -1839,7 +1858,7 @@ img { max-width: 100%; display: block; }
         </div>
         <span class="service-badge">4-8 сессий</span>
       </div>
-      <div class="service-card reveal stagger-6">
+      <a href="./seksolog-online.html" class="service-card reveal stagger-6">
         <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
           <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
         </svg>
@@ -1848,7 +1867,7 @@ img { max-width: 100%; display: block; }
           <p>Работа с сексуальностью</p>
         </div>
         <span class="service-badge">Специализация</span>
-      </div>
+      </a>
     </div>
   </div>
 </section>
@@ -2228,6 +2247,7 @@ function animateParticles() {
       if (dist < 100) {
         const alpha = (1 - dist / 100) * 0.05;
         ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.moveTo(particles[i].x, particles[i].y);
         ctx.lineTo(particles[j].x, particles[j].y);
         ctx.strokeStyle = `rgba(201, 150, 58, ${alpha})`;
