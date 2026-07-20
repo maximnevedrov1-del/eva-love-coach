@@ -1,0 +1,1672 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://evaintimacycoach.com/seksolog-online.html">
+<title>Сексолог онлайн — консультация сексолога анонимно | Ева</title>
+<meta name="description" content="Консультация сексолога онлайн по видеосвязи. Деликатно, анонимно, из любой страны. Помогаю женщинам, мужчинам и парам. Запишитесь к Еве.">
+<meta name="author" content="Ева">
+<meta name="theme-color" content="#FAF6F0">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://evaintimacycoach.com/seksolog-online.html">
+<meta property="og:title" content="Сексолог онлайн — консультация анонимно | Ева">
+<meta property="og:description" content="Консультация сексолога онлайн по видеосвязи. Деликатно, анонимно, из любой страны. Помогаю женщинам, мужчинам и парам.">
+<meta property="og:image" content="https://evaintimacycoach.com/eva-photo.jpg">
+<meta property="og:locale" content="ru_RU">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Сексолог онлайн — консультация анонимно | Ева">
+<meta name="twitter:description" content="Консультация сексолога онлайн по видеосвязи. Деликатно, анонимно, из любой страны.">
+<meta name="twitter:image" content="https://evaintimacycoach.com/eva-photo.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ==================== CSS RESET & VARIABLES ==================== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-primary: #FAF6F0;
+  --bg-secondary: #F5EFE6;
+  --bg-footer: #2C2419;
+
+  --card: #FFFFFF;
+  --card-hover: #FFFDF9;
+  --card-border: rgba(201,150,58,0.20);
+
+  --gold: #C9963A;
+  --gold-bright: #D4A853;
+  --gold-light: rgba(201,150,58,0.12);
+  --gold-gradient: linear-gradient(135deg, #C9963A, #D4A853);
+
+  --text-primary: #2C2419;
+  --text-secondary: #6B5E4F;
+  --text-tertiary: #A89885;
+  --text-cream: #F0E6D3;
+
+  --shadow: rgba(44,36,25,0.06);
+  --shadow-hover: rgba(44,36,25,0.10);
+  --shadow-gold: rgba(201,150,58,0.15);
+
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+  --container: 1280px;
+  --transition-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+  --cursor-x: 50vw;
+  --cursor-y: 50vh;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(201,150,58,0.25);
+  color: var(--text-primary);
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--gold-bright); }
+
+a { text-decoration: none; color: inherit; }
+button { border: none; background: none; cursor: pointer; font-family: inherit; color: inherit; }
+img { max-width: 100%; display: block; }
+
+/* ==================== CURSOR GLOW ==================== */
+.cursor-glow {
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  background: radial-gradient(circle, rgba(201,150,58,0.10) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  left: var(--cursor-x);
+  top: var(--cursor-y);
+  transition: left 0.2s ease, top 0.2s ease;
+  will-change: transform;
+}
+@media (max-width: 768px) { .cursor-glow { display: none; } }
+
+/* ==================== CONTAINER ==================== */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+@media (max-width: 768px) { .container { padding: 0 16px; } }
+
+/* ==================== REVEAL ANIMATIONS ==================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s var(--transition-smooth), transform 0.8s var(--transition-smooth);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.stagger-1 { transition-delay: 0.12s; }
+.stagger-2 { transition-delay: 0.24s; }
+.stagger-3 { transition-delay: 0.36s; }
+.stagger-4 { transition-delay: 0.48s; }
+
+/* ==================== NAVIGATION ==================== */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 20px 0;
+  transition: all 0.4s var(--transition-smooth);
+  border-bottom: 1px solid transparent;
+}
+.nav.scrolled {
+  background: rgba(250,246,240,0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(201,150,58,0.15);
+  padding: 14px 0;
+  box-shadow: 0 4px 30px var(--shadow);
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-logo {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+}
+.nav-logo-sub {
+  font-family: var(--font-body);
+  font-size: 9px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-top: -4px;
+}
+.nav-links {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+}
+.nav-links a {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+  position: relative;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: width 0.3s ease;
+}
+.nav-links a:hover { color: var(--gold); }
+.nav-links a:hover::after { width: 100%; }
+
+.nav-cta {
+  padding: 12px 28px;
+  background: var(--gold-gradient);
+  color: #FFFFFF;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.nav-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.35), transparent);
+  transition: left 0.5s ease;
+}
+.nav-cta:hover::before { left: 100%; }
+.nav-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px var(--shadow-gold);
+}
+
+/* ==================== MOBILE NAV ==================== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1002;
+  padding: 8px;
+}
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 1.5px;
+  background: var(--gold);
+  transition: all 0.3s ease;
+}
+.hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(4.5px, 4.5px); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(4.5px, -4.5px); }
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: rgba(250,246,240,0.98);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+.mobile-menu.active {
+  opacity: 1;
+  pointer-events: all;
+}
+.mobile-menu a {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+}
+.mobile-menu a:hover { color: var(--gold); }
+.mobile-menu .nav-cta {
+  margin-top: 16px;
+  font-size: 13px;
+  padding: 16px 40px;
+}
+
+@media (max-width: 768px) {
+  .nav-links, .nav-cta { display: none; }
+  .hamburger { display: flex; }
+}
+
+/* ==================== HERO ==================== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--bg-primary);
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('./hero-bg.png') center/cover no-repeat;
+  z-index: 0;
+}
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(250,246,240,0.93) 0%, rgba(250,246,240,0.75) 50%, rgba(250,246,240,0.88) 100%);
+}
+.hero-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: end;
+  width: 100%;
+  padding-bottom: 80px;
+  padding-top: 120px;
+}
+
+.hero-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 24px;
+  display: block;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: heroFadeIn 0.8s var(--transition-smooth) 0.2s forwards;
+}
+.hero-h1 {
+  font-family: var(--font-display);
+  font-size: clamp(38px, 5vw, 64px);
+  font-weight: 600;
+  line-height: 1.05;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+}
+.hero-h1-line {
+  display: block;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: heroFadeIn 0.8s var(--transition-smooth) forwards;
+}
+.hero-h1-line:nth-child(1) { animation-delay: 0.3s; }
+.hero-h1-line:nth-child(2) { animation-delay: 0.45s; }
+.hero-h1-line:nth-child(3) {
+  animation-delay: 0.6s;
+  font-style: italic;
+  background: linear-gradient(135deg, var(--gold), var(--gold-bright));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@keyframes heroFadeIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-gold-line {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-bright));
+  margin: 28px 0;
+  opacity: 0;
+  animation: heroFadeIn 0.8s var(--transition-smooth) 0.75s forwards;
+}
+
+.hero-subtitle {
+  font-size: clamp(14px, 1.5vw, 17px);
+  line-height: 1.7;
+  color: var(--text-secondary);
+  max-width: 480px;
+  margin-bottom: 40px;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: heroFadeIn 0.8s var(--transition-smooth) 0.85s forwards;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: heroFadeIn 0.8s var(--transition-smooth) 1.0s forwards;
+}
+
+.btn-primary {
+  padding: 16px 32px;
+  background: var(--gold-gradient);
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+}
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.35), transparent);
+  transition: left 0.6s ease;
+}
+.btn-primary:hover::before { left: 100%; }
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 40px var(--shadow-gold);
+}
+
+.btn-secondary {
+  padding: 16px 32px;
+  background: transparent;
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 1px solid var(--gold);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+.btn-secondary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(201,150,58,0.08), transparent);
+  transition: left 0.6s ease;
+}
+.btn-secondary:hover::before { left: 100%; }
+.btn-secondary:hover {
+  background: rgba(201,150,58,0.08);
+  border-color: var(--gold-bright);
+  color: var(--gold-bright);
+  transform: translateY(-3px);
+}
+
+.hero-image-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+}
+.hero-image {
+  max-height: 80vh;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 60px rgba(44,36,25,0.12));
+  opacity: 0;
+  transform: translateY(40px);
+  animation: heroFadeIn 1s var(--transition-smooth) 0.7s forwards;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding-top: 100px;
+    padding-bottom: 60px;
+    text-align: center;
+  }
+  .hero-h1 { margin-bottom: 20px; }
+  .hero-subtitle { margin: 0 auto 32px; max-width: 100%; }
+  .hero-buttons { justify-content: center; }
+  .hero-image-wrap { display: none; }
+  .hero-gold-line { margin: 20px auto; }
+}
+
+/* ==================== SECTIONS BASE ==================== */
+.section {
+  padding: 110px 0;
+  background: var(--bg-primary);
+  position: relative;
+  overflow: hidden;
+}
+.section-alt { background: var(--bg-secondary); }
+.section-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+  display: block;
+}
+.section h2 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+.section-desc {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  max-width: 760px;
+  margin-bottom: 48px;
+}
+.section-desc p { margin-bottom: 16px; }
+.section-desc p:last-child { margin-bottom: 0; }
+@media (max-width: 768px) { .section { padding: 80px 0; } }
+
+/* ==================== QUICK ANSWER ==================== */
+.intro { padding: 90px 0 80px; }
+.quick-answer {
+  background: var(--gold-light);
+  border: 1px solid var(--card-border);
+  border-left: 4px solid var(--gold);
+  border-radius: 12px;
+  padding: 28px 32px;
+  max-width: 860px;
+  margin-bottom: 40px;
+}
+.quick-answer .qa-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+.quick-answer p {
+  color: var(--text-primary);
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 0;
+}
+.intro-text {
+  max-width: 760px;
+  font-size: 16px;
+  line-height: 1.85;
+  color: var(--text-secondary);
+}
+.intro-text p { margin-bottom: 18px; }
+.intro-text p:last-child { margin-bottom: 0; }
+.intro-text strong { color: var(--text-primary); }
+
+/* ==================== GLASS CARDS (REQUESTS) ==================== */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+.glass-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 36px 28px;
+  transition: all 0.4s var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px var(--shadow);
+}
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201,150,58,0.4), transparent);
+}
+.glass-card:hover {
+  border-color: rgba(201,150,58,0.35);
+  transform: translateY(-4px);
+  background: var(--card-hover);
+  box-shadow: 0 20px 50px var(--shadow-hover);
+}
+.glass-card h3 {
+  font-family: var(--font-display);
+  font-size: 21px;
+  font-weight: 500;
+  margin-bottom: 14px;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+.glass-card ul { list-style: none; }
+.glass-card ul li {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  padding-left: 22px;
+  position: relative;
+  margin-bottom: 10px;
+}
+.glass-card ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold-light);
+  border: 1.5px solid var(--gold);
+}
+.note-box {
+  max-width: 860px;
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  border-left: 3px solid var(--gold);
+  padding-left: 24px;
+  font-style: italic;
+}
+@media (max-width: 1024px) { .cards-grid { grid-template-columns: 1fr; } }
+
+/* ==================== STEPS ==================== */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.step-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 32px 26px;
+  position: relative;
+  box-shadow: 0 4px 20px var(--shadow);
+  transition: all 0.4s var(--transition-smooth);
+}
+.step-card:hover {
+  border-color: rgba(201,150,58,0.35);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px var(--shadow-hover);
+}
+.step-number {
+  font-family: var(--font-display);
+  font-size: 52px;
+  font-weight: 600;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+.step-card h3 {
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: var(--text-primary);
+}
+.step-card p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+@media (max-width: 1024px) { .steps-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 768px) { .steps-grid { grid-template-columns: 1fr; } }
+
+/* ==================== PRIVACY (DARK) ==================== */
+.privacy {
+  background: var(--bg-footer);
+  color: var(--text-cream);
+}
+.privacy .section-label { color: var(--gold-bright); }
+.privacy h2 { color: var(--text-cream); }
+.privacy .section-desc { color: rgba(240,230,211,0.72); }
+.privacy-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.privacy-item {
+  border: 1px solid rgba(201,150,58,0.28);
+  border-radius: 12px;
+  padding: 26px 28px;
+  transition: all 0.4s var(--transition-smooth);
+}
+.privacy-item:hover {
+  border-color: rgba(212,168,83,0.55);
+  background: rgba(201,150,58,0.06);
+}
+.privacy-item h3 {
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--gold-bright);
+  margin-bottom: 8px;
+}
+.privacy-item p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(240,230,211,0.72);
+  margin: 0;
+}
+@media (max-width: 768px) { .privacy-grid { grid-template-columns: 1fr; } }
+
+/* ==================== ABOUT / WHY EVA ==================== */
+.about-grid {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 80px;
+  align-items: center;
+}
+.about-image-wrap { position: relative; }
+.about-image {
+  border: 1px solid var(--card-border);
+  border-radius: 4px;
+  transform: rotate(-3deg);
+  transition: transform 0.5s var(--transition-smooth);
+  box-shadow: 0 20px 60px var(--shadow);
+}
+.about-image:hover { transform: rotate(0deg); }
+.about-image-frame {
+  position: absolute;
+  inset: -12px;
+  border: 1px solid var(--card-border);
+  border-radius: 4px;
+  pointer-events: none;
+  transform: rotate(-3deg);
+}
+.about-text {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 28px;
+}
+.about-text p { margin-bottom: 16px; }
+.about-credentials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 0;
+  align-items: center;
+  margin-bottom: 28px;
+}
+.about-credential {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+.about-credential-sep {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--gold);
+  margin: 0 12px;
+  flex-shrink: 0;
+}
+.text-link {
+  color: var(--gold);
+  font-weight: 600;
+  border-bottom: 1px solid rgba(201,150,58,0.35);
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+.text-link:hover { color: var(--gold-bright); border-color: var(--gold-bright); }
+@media (max-width: 768px) {
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .about-image-wrap { max-width: 300px; margin: 0 auto; }
+}
+
+/* ==================== SERVICE CARDS (FORMATS) ==================== */
+.services-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.service-card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 28px 32px;
+  transition: all 0.4s var(--transition-smooth);
+  box-shadow: 0 2px 12px var(--shadow);
+}
+.service-card:hover {
+  border-color: rgba(201,150,58,0.3);
+  background: var(--card-hover);
+  transform: translateX(8px);
+  box-shadow: 0 8px 30px var(--shadow-hover);
+}
+.service-info { flex: 1; }
+.service-info h3 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  color: var(--text-primary);
+}
+.service-info p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+.service-badge {
+  padding: 6px 16px;
+  background: var(--gold-light);
+  border: 1px solid var(--card-border);
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.formats-note {
+  margin-top: 32px;
+  font-size: 14px;
+  color: var(--text-tertiary);
+}
+@media (max-width: 768px) {
+  .service-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 24px;
+  }
+}
+
+/* ==================== RELATED ARTICLES ==================== */
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.related-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 26px 24px;
+  transition: all 0.4s var(--transition-smooth);
+  display: block;
+}
+.related-card:hover {
+  border-color: rgba(201,150,58,0.35);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px var(--shadow-hover);
+}
+.related-card .cat {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  margin-bottom: 10px;
+  display: block;
+}
+.related-card h3 {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+.related-card p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+@media (max-width: 1024px) { .related-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 768px) { .related-grid { grid-template-columns: 1fr; } }
+
+/* ==================== FAQ ==================== */
+.faq-list { position: relative; z-index: 1; }
+.faq-item {
+  border-bottom: 1px solid rgba(201,150,58,0.12);
+}
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 0;
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: color 0.3s ease;
+  text-align: left;
+  gap: 20px;
+}
+.faq-question:hover { color: var(--gold); }
+.faq-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  color: var(--gold);
+  transition: transform 0.4s var(--transition-smooth);
+}
+.faq-item.active .faq-icon { transform: rotate(45deg); }
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s var(--transition-smooth), opacity 0.4s var(--transition-smooth), padding 0.4s var(--transition-smooth);
+  opacity: 0;
+}
+.faq-item.active .faq-answer {
+  max-height: 400px;
+  opacity: 1;
+  padding-bottom: 28px;
+}
+.faq-answer p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  max-width: 800px;
+}
+@media (max-width: 768px) {
+  .faq-question { font-size: 15px; padding: 20px 0; }
+}
+
+/* ==================== CTA FINAL ==================== */
+.cta-final {
+  text-align: center;
+  padding: 110px 0;
+}
+.cta-final .section-label { margin-bottom: 20px; }
+.cta-final h2 {
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 720px;
+}
+.cta-final p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  max-width: 560px;
+  margin: 0 auto 44px;
+}
+.cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ==================== FOOTER ==================== */
+.footer {
+  background: var(--bg-footer);
+  border-top: 1px solid rgba(201,150,58,0.12);
+  padding: 60px 0 30px;
+}
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.footer-logo {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+}
+.footer-logo-sub {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-top: 4px;
+  color: #8B7D6B;
+}
+.footer-nav {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+.footer-nav a {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-cream);
+  opacity: 0.7;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+.footer-nav a:hover { color: var(--gold); opacity: 1; }
+.footer-bottom {
+  border-top: 1px solid rgba(240,230,211,0.08);
+  padding-top: 24px;
+  text-align: center;
+  font-size: 13px;
+  color: #8B7D6B;
+}
+@media (max-width: 768px) {
+  .footer-inner {
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+  }
+  .footer-nav { flex-wrap: wrap; justify-content: center; gap: 20px; }
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Сексолог онлайн — консультация анонимно",
+  "serviceType": "Консультация сексолога онлайн",
+  "url": "https://evaintimacycoach.com/seksolog-online.html",
+  "description": "Консультация сексолога онлайн по видеосвязи для женщин, мужчин и пар. Деликатно, анонимно, из любой страны. Помощь с вопросами желания, близости и интимной коммуникации.",
+  "areaServed": "Worldwide",
+  "availableLanguage": "Russian",
+  "provider": {
+    "@type": "Person",
+    "name": "Ева",
+    "jobTitle": "Психолог, сексолог, love coach",
+    "url": "https://evaintimacycoach.com/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Как проходит консультация сексолога онлайн?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Встреча проходит по видеосвязи в заранее согласованное время, из любой страны и города. Индивидуальная консультация длится 50 минут, встреча для пары — 90 минут. Это спокойный разговор: вы рассказываете о своей ситуации, я задаю бережные вопросы, объясняю, как устроены психология и физиология желания, и вместе мы намечаем понятные шаги. Никаких осмотров и медицинских манипуляций — только диалог и работа с психологической стороной вопроса."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Это действительно анонимно?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Да. Настоящее имя и документы не требуются — достаточно имени, которым вам комфортно представиться. Содержание встреч не разглашается никому: это профессиональная тайна. Переписка и оплата проходят без указания темы консультации, а запись видеовстречи не ведётся."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Чем сексолог отличается от психолога?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Сексолог — это специалист, который в дополнение к психологической подготовке глубоко изучает сексуальность человека: физиологию желания, психосоматику, особенности интимной коммуникации в паре. С интимной темой к психологу общего профиля многим идти неловко, а сексолог работает с ней каждый день — спокойно и без смущения. При этом сексолог не врач: обследование и лечение назначает доктор, и если в вашей ситуации нужна медицина, я честно скажу об этом и подскажу, к кому обратиться."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Нужно ли готовиться к консультации?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Нет, специальная подготовка не нужна. Достаточно тихого места, наушников и стабильного интернета. Не обязательно идеально формулировать запрос — мы сформулируем его вместе в начале встречи. Если хотите, заранее коротко запишите, что вас тревожит, чтобы ничего не забыть."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Сколько сессий обычно нужно?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Это зависит от запроса. Иногда достаточно одной-трёх встреч, чтобы разобраться в ситуации и получить рабочий план. Более глубокие темы — травматичный опыт, многолетние трудности в паре — требуют регулярной работы. После первой консультации я честно скажу, какой объём помощи вижу в вашем случае, и решение всегда остаётся за вами."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Можно ли консультацию паре из разных городов?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Да, можно. Онлайн-формат позволяет каждому партнёру подключиться из своего города или страны в общий видеозвонок. Для пар, живущих на расстоянии, это часто единственная возможность работать вместе — и по глубине такая работа не уступает очной встрече."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Главная",
+      "item": "https://evaintimacycoach.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Сексолог онлайн",
+      "item": "https://evaintimacycoach.com/seksolog-online.html"
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+
+<!-- Cursor Glow -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- ==================== NAVIGATION ==================== -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="./index.html" class="nav-logo-group">
+      <div class="nav-logo">ЕВА</div>
+      <div class="nav-logo-sub">психолог · сексолог</div>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="./index.html">Главная</a></li>
+      <li><a href="./blog.html">Блог</a></li>
+      <li><a href="./diplomas.html">Дипломы</a></li>
+    </ul>
+
+    <a href="https://evaintimacycoach.com/#contact" class="nav-cta">Записаться</a>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="./index.html" class="mobile-link">Главная</a>
+    <a href="./blog.html" class="mobile-link">Блог</a>
+    <a href="./diplomas.html" class="mobile-link">Дипломы</a>
+    <a href="https://evaintimacycoach.com/#contact" class="nav-cta">Записаться</a>
+  </div>
+</nav>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <canvas class="hero-particles" id="particleCanvas"></canvas>
+
+  <div class="container hero-content">
+    <div class="hero-text">
+      <span class="hero-label">Консультация сексолога онлайн</span>
+      <h1 class="hero-h1">
+        <span class="hero-h1-line">Сексолог онлайн:</span>
+        <span class="hero-h1-line">консультация анонимно</span>
+        <span class="hero-h1-line">и без осуждения</span>
+      </h1>
+      <div class="hero-gold-line"></div>
+      <p class="hero-subtitle">Интимная тема — та, которую неловко поднять даже с близкими. Онлайн-формат позволяет поговорить с дипломированным сексологом из дома, анонимно и в своём темпе. Женщины, мужчины и пары — из любой страны.</p>
+      <div class="hero-buttons">
+        <a href="https://evaintimacycoach.com/#contact" class="btn-primary">Записаться на консультацию</a>
+        <a href="https://t.me/eva.love.coach" target="_blank" rel="noopener" class="btn-secondary">Написать в Telegram</a>
+      </div>
+    </div>
+    <div class="hero-image-wrap">
+      <img src="./eva-photo.jpg" alt="Ева — сексолог, консультации онлайн анонимно" class="hero-image">
+    </div>
+  </div>
+</section>
+
+<!-- ==================== QUICK ANSWER ==================== -->
+<section class="section intro">
+  <div class="container">
+    <div class="quick-answer reveal">
+      <span class="qa-label">Короткий ответ</span>
+      <p>Консультация сексолога онлайн — это конфиденциальная беседа по видеосвязи с дипломированным специалистом о желании, близости и интимных трудностях. Проходит из любой точки мира, длится 50 минут и не требует называть настоящее имя. Подходит женщинам, мужчинам и парам. Записаться можно анонимно через Telegram.</p>
+    </div>
+    <div class="intro-text reveal stagger-1">
+      <p>У большинства людей есть вопрос о сексуальности, который они не решаются озвучить годами. Друзьям — неловко, партнёру — страшно, поисковику — всё равно что спросить у толпы. А тем временем молчание превращается в тревогу, обиды и отдаление.</p>
+      <p>К сексологу приходят не с «чем-то постыдным», а с обычными человеческими трудностями: пропало желание, близость стала редкой, тяжело говорить о своих потребностях. <strong>Онлайн-формат снимает главный барьер</strong> — не нужно никуда ехать, сидеть в очереди и называть себя. Вы остаётесь дома, в безопасности, и разговариваете со специалистом, для которого ваша тема — ежедневная работа.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== REQUESTS ==================== -->
+<section class="section section-alt" id="requests">
+  <div class="container">
+    <span class="section-label reveal">С чем приходят</span>
+    <h2 class="reveal">С какими вопросами приходят к сексологу онлайн</h2>
+    <div class="section-desc reveal stagger-1">
+      <p>Запросы бывают очень разными, но объединяет их одно: о них почти невозможно поговорить в обычной жизни. Ниже — то, с чем люди обращаются чаще всего. Если вашей ситуации нет в списке, это не значит, что с ней нельзя прийти.</p>
+    </div>
+    <div class="cards-grid">
+      <div class="glass-card reveal stagger-1">
+        <h3>Сексолог для женщин онлайн</h3>
+        <ul>
+          <li>Снизилось или пропало желание близости</li>
+          <li>Сложности с возбуждением и оргазмом</li>
+          <li>Боль, напряжение, дискомфорт при близости</li>
+          <li>Стыд, зажатость, неприятие своего тела</li>
+          <li>Восстановление интимной жизни после родов</li>
+          <li>Страх близости после болезненного опыта</li>
+        </ul>
+      </div>
+      <div class="glass-card reveal stagger-2">
+        <h3>Сексолог для мужчин</h3>
+        <ul>
+          <li>Тревога перед близостью, страх «не получится»</li>
+          <li>Трудности с эрекцией или контролем, когда врач исключил физические причины</li>
+          <li>Снижение желания на фоне стресса и усталости</li>
+          <li>Зависимость от порнографии</li>
+          <li>Неуверенность в себе как в партнёре</li>
+          <li>Неловкость говорить о своих желаниях</li>
+        </ul>
+      </div>
+      <div class="glass-card reveal stagger-3">
+        <h3>Сексолог для пары</h3>
+        <ul>
+          <li>Разное либидо: один хочет чаще, другой реже</li>
+          <li>Близость стала редкой или почти исчезла</li>
+          <li>Невозможно поговорить о сексе без ссоры или стыда</li>
+          <li>Охлаждение после многих лет брака</li>
+          <li>Восстановление доверия и близости после измены</li>
+          <li>Интимная жизнь в отношениях на расстоянии</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note-box reveal">Важно: если ваша ситуация требует медицинского обследования, я честно скажу об этом на первой встрече и подскажу, к какому врачу обратиться. Сексолог работает с психологической стороной вопроса и не заменяет доктора.</p>
+  </div>
+</section>
+
+<!-- ==================== STEPS ==================== -->
+<section class="section" id="how">
+  <div class="container">
+    <span class="section-label reveal">Формат работы</span>
+    <h2 class="reveal">Как проходит консультация сексолога онлайн</h2>
+    <div class="section-desc reveal stagger-1">
+      <p>Всё устроено максимально просто и бережно — от первого сообщения до результата. Вы контролируете темп и глубину разговора на каждом этапе.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card reveal stagger-1">
+        <div class="step-number">01</div>
+        <h3>Заявка</h3>
+        <p>Напишите мне в Telegram — достаточно пары фраз о том, что беспокоит, без подробностей. Договоримся об удобном времени встречи в вашем часовом поясе.</p>
+      </div>
+      <div class="step-card reveal stagger-2">
+        <div class="step-number">02</div>
+        <h3>Знакомство</h3>
+        <p>В начале встречи договариваемся о правилах: вы вправе не отвечать на любой вопрос, сменить тему или остановить разговор. Это ваше пространство.</p>
+      </div>
+      <div class="step-card reveal stagger-3">
+        <div class="step-number">03</div>
+        <h3>Работа</h3>
+        <p>Спокойно разбираем ситуацию: что происходит, что на это влияет, как устроены психология и физиология желания. Без оценок, диагнозов навскидку и морали.</p>
+      </div>
+      <div class="step-card reveal stagger-4">
+        <div class="step-number">04</div>
+        <h3>План</h3>
+        <p>Вы уходите с понятными шагами: что делать, о чём поговорить с партнёром, над чем работать дальше. При необходимости планируем следующие встречи.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== PRIVACY ==================== -->
+<section class="section privacy" id="privacy">
+  <div class="container">
+    <span class="section-label reveal">Главный вопрос этой темы</span>
+    <h2 class="reveal">Сексолог анонимно онлайн: как устроена конфиденциальность</h2>
+    <div class="section-desc reveal stagger-1">
+      <p>Страх, что кто-то узнает, — причина номер один, по которой люди годами откладывают обращение к сексологу. Поэтому анонимность здесь не опция, а основа работы.</p>
+    </div>
+    <div class="privacy-grid">
+      <div class="privacy-item reveal stagger-1">
+        <h3>Без настоящего имени</h3>
+        <p>Документы и паспортные данные не нужны. Достаточно имени, которым вам комфортно представиться, — хоть вымышленного.</p>
+      </div>
+      <div class="privacy-item reveal stagger-2">
+        <h3>Профессиональная тайна</h3>
+        <p>Содержание встреч не разглашается никому: ни партнёру, ни родственникам, ни третьим лицам. Это этический принцип моей работы, а не формальность.</p>
+      </div>
+      <div class="privacy-item reveal stagger-3">
+        <h3>Никаких записей</h3>
+        <p>Видеовстречи не записываются. Переписка и оплата проходят без указания темы консультации — в выписках и сообщениях не будет слов, которые вас выдадут.</p>
+      </div>
+      <div class="privacy-item reveal stagger-4">
+        <h3>Вы решаете, как быть в кадре</h3>
+        <p>Камеру можно не включать, пока не почувствуете доверие. Многие первые встречи проходят только голосом — и это нормально.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== WHY EVA ==================== -->
+<section class="section" id="about">
+  <div class="container about-grid">
+    <div class="about-image-wrap reveal">
+      <img src="./eva-photo.jpg" alt="Ева — психолог и сексолог" class="about-image">
+      <div class="about-image-frame"></div>
+    </div>
+    <div class="about-content reveal stagger-2">
+      <span class="section-label">Почему Ева</span>
+      <h2>Специалист, с которым можно говорить о сокровенном</h2>
+      <div class="about-text">
+        <p>Меня зовут Ева, я практикующий психолог и сексолог. Я знаю, какой смелости стоит первое сообщение — поэтому выстраиваю работу так, чтобы с первых минут рядом с вами был не «эксперт с оценками», а внимательный собеседник.</p>
+        <p>Мой подход — бережный и практичный: без морализаторства, без шаблонов «так принято» и без обещаний чудес за одну встречу. Мы идём в вашем темпе и опираемся только на то, что подходит именно вам.</p>
+        <p>Квалификацию подтверждаю документами — посмотрите <a href="./diplomas.html" class="text-link">мои дипломы и сертификаты</a>. Работаю в рамках профессиональной этики: конфиденциально, уважительно и только в границах своей компетенции.</p>
+      </div>
+      <div class="about-credentials">
+        <span class="about-credential">Психолог</span>
+        <span class="about-credential-sep"></span>
+        <span class="about-credential">Сексолог</span>
+        <span class="about-credential-sep"></span>
+        <span class="about-credential">Love Coach</span>
+        <span class="about-credential-sep"></span>
+        <span class="about-credential">Онлайн по всему миру</span>
+      </div>
+      <a href="https://evaintimacycoach.com/#contact" class="btn-primary">Задать вопрос Еве</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FORMATS ==================== -->
+<section class="section section-alt" id="formats">
+  <div class="container">
+    <span class="section-label reveal">Услуги</span>
+    <h2 class="reveal">Форматы консультаций</h2>
+    <div class="section-desc reveal stagger-1">
+      <p>Выберите формат под свою задачу. Если сомневаетесь — напишите, помогу определиться.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal stagger-1">
+        <div class="service-info">
+          <h3>Индивидуальная консультация</h3>
+          <p>Глубокий разбор вашего запроса один на один: желание, тревога, тело, прошлый опыт. Подходит как первая встреча и как формат регулярной работы.</p>
+        </div>
+        <div class="service-badge">50 минут</div>
+      </div>
+      <div class="service-card reveal stagger-2">
+        <div class="service-info">
+          <h3>Консультация для пары</h3>
+          <p>Совместная встреча: разное либидо, охлаждение, разговоры о желаниях без ссор. Можно подключиться из разных городов и стран.</p>
+        </div>
+        <div class="service-badge">90 минут</div>
+      </div>
+      <div class="service-card reveal stagger-3">
+        <div class="service-info">
+          <h3>Экспресс-консультация</h3>
+          <p>Один конкретный вопрос и быстрый ответ специалиста: «нормально ли это», «с чего начать», «как поговорить с партнёром». Хороший первый шаг, если пока страшно.</p>
+        </div>
+        <div class="service-badge">30 минут</div>
+      </div>
+    </div>
+    <p class="formats-note reveal">Стоимость уточняйте при записи — она зависит от формата. Первый короткий контакт в Telegram ни к чему не обязывает.</p>
+  </div>
+</section>
+
+<!-- ==================== RELATED ARTICLES ==================== -->
+<section class="section" id="articles">
+  <div class="container">
+    <span class="section-label reveal">Читать по теме</span>
+    <h2 class="reveal">Полезные статьи из блога</h2>
+    <div class="related-grid" style="margin-top: 48px;">
+      <a href="./blog/seksualnoe-zdorove.html" class="related-card reveal stagger-1">
+        <span class="cat">Сексология</span>
+        <h3>Сексуальное здоровье: что нужно знать каждому</h3>
+        <p>Базовые знания о сексуальном здоровье, которые помогают заботиться о себе и отношениях.</p>
+      </a>
+      <a href="./blog/muzh-ne-hochet.html" class="related-card reveal stagger-2">
+        <span class="cat">Отношения</span>
+        <h3>Муж не хочет близости: причины и что делать</h3>
+        <p>Реальные причины мужского отказа от близости и бережные шаги для женщины.</p>
+      </a>
+      <a href="./blog/zhena-ne-hochet-blizosti.html" class="related-card reveal stagger-3">
+        <span class="cat">Отношения</span>
+        <h3>Жена не хочет близости: причины и что делать</h3>
+        <p>Почему у женщины пропадает желание и как мужу вернуть близость без давления.</p>
+      </a>
+      <a href="./blog/kak-govorit-o-sekse.html" class="related-card reveal stagger-4">
+        <span class="cat">Коммуникация</span>
+        <h3>Как говорить с партнёром о сексе без неловкости</h3>
+        <p>Практичные способы начать честный разговор о желаниях и границах.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FAQ ==================== -->
+<section class="section section-alt" id="faq">
+  <div class="container">
+    <span class="section-label reveal">FAQ</span>
+    <h2 class="reveal" style="margin-bottom: 48px;">Частые вопросы о консультации сексолога онлайн</h2>
+    <div class="faq-list">
+      <div class="faq-item reveal stagger-1">
+        <button class="faq-question">
+          Как проходит консультация сексолога онлайн?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="12" y1="5" x2="12" y2="19"/>
+            <line x1="5" y1="12" x2="19" y2="12"/>
+          </svg>
+        </button>
+        <div class="faq-answer">
+          <p>Встреча проходит по видеосвязи в заранее согласованное время, из любой страны и города. Индивидуальная консультация длится 50 минут, встреча для пары — 90 минут. Это спокойный разговор: вы рассказываете о своей ситуации, я задаю бережные вопросы, объясняю, как устроены психология и физиология желания, и вместе мы намечаем понятные шаги. Никаких осмотров и медицинских манипуляций — только диалог и работа с психологической стороной вопроса.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal stagger-2">
+        <button class="faq-question">
+          Это действительно анонимно?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="12" y1="5" x2="12" y2="19"/>
+            <line x1="5" y1="12" x2="19" y2="12"/>
+          </svg>
+        </button>
+        <div class="faq-answer">
+          <p>Да. Настоящее имя и документы не требуются — достаточно имени, которым вам комфортно представиться. Содержание встреч не разглашается никому: это профессиональная тайна. Переписка и оплата проходят без указания темы консультации, а запись видеовстречи не ведётся.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal stagger-3">
+        <button class="faq-question">
+          Чем сексолог отличается от психолога?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="12" y1="5" x2="12" y2="19"/>
+            <line x1="5" y1="12" x2="19" y2="12"/>
+          </svg>
+        </button>
+        <div class="faq-answer">
+          <p>Сексолог — это специалист, который в дополнение к психологической подготовке глубоко изучает сексуальность человека: физиологию желания, психосоматику, особенности интимной коммуникации в паре. С интимной темой к психологу общего профиля многим идти неловко, а сексолог работает с ней каждый день — спокойно и без смущения. При этом сексолог не врач: обследование и лечение назначает доктор, и если в вашей ситуации нужна медицина, я честно скажу об этом и подскажу, к кому обратиться.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal stagger-4">
+        <button class="faq-question">
+          Нужно ли готовиться к консультации?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="12" y1="5" x2="12" y2="19"/>
+            <line x1="5" y1="12" x2="19" y2="12"/>
+          </svg>
+        </button>
+        <div class="faq-answer">
+          <p>Нет, специальная подготовка не нужна. Достаточно тихого места, наушников и стабильного интернета. Не обязательно идеально формулировать запрос — мы сформулируем его вместе в начале встречи. Если хотите, заранее коротко запишите, что вас тревожит, чтобы ничего не забыть.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal stagger-1">
+        <button class="faq-question">
+          Сколько сессий обычно нужно?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="12" y1="5" x2="12" y2="19"/>
+            <line x1="5" y1="12" x2="19" y2="12"/>
+          </svg>
+        </button>
+        <div class="faq-answer">
+          <p>Это зависит от запроса. Иногда достаточно одной-трёх встреч, чтобы разобраться в ситуации и получить рабочий план. Более глубокие темы — травматичный опыт, многолетние трудности в паре — требуют регулярной работы. После первой консультации я честно скажу, какой объём помощи вижу в вашем случае, и решение всегда остаётся за вами.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal stagger-2">
+        <button class="faq-question">
+          Можно ли консультацию паре из разных городов?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="12" y1="5" x2="12" y2="19"/>
+            <line x1="5" y1="12" x2="19" y2="12"/>
+          </svg>
+        </button>
+        <div class="faq-answer">
+          <p>Да, можно. Онлайн-формат позволяет каждому партнёру подключиться из своего города или страны в общий видеозвонок. Для пар, живущих на расстоянии, это часто единственная возможность работать вместе — и по глубине такая работа не уступает очной встрече.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CTA FINAL ==================== -->
+<section class="section cta-final" id="cta">
+  <div class="container">
+    <span class="section-label reveal">Первый шаг</span>
+    <h2 class="reveal">Вопрос, который вы откладывали, уже можно задать</h2>
+    <p class="reveal stagger-1">Напишите мне в Telegram пару слов о своей ситуации — без имени, без подробностей, без обязательств. Я отвечу в течение 24 часов и подскажу, с чего начать.</p>
+    <div class="cta-buttons reveal stagger-2">
+      <a href="https://evaintimacycoach.com/#contact" class="btn-primary">Записаться на консультацию</a>
+      <a href="https://t.me/eva.love.coach" target="_blank" rel="noopener" class="btn-secondary">Написать в Telegram</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">ЕВА</div>
+        <div class="footer-logo-sub">психолог · сексолог · love coach</div>
+      </div>
+      <ul class="footer-nav">
+        <li><a href="./index.html">Главная</a></li>
+        <li><a href="./blog.html">Блог</a></li>
+        <li><a href="./diplomas.html">Дипломы</a></li>
+        <li><a href="https://evaintimacycoach.com/#contact">Контакты</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Ева. Все права защищены.
+    </div>
+  </div>
+</footer>
+
+<!-- ==================== JAVASCRIPT ==================== -->
+<script>
+// ==================== CURSOR GLOW ====================
+const cursorGlow = document.getElementById('cursorGlow');
+document.addEventListener('mousemove', (e) => {
+  document.documentElement.style.setProperty('--cursor-x', e.clientX + 'px');
+  document.documentElement.style.setProperty('--cursor-y', e.clientY + 'px');
+});
+
+// ==================== NAV SCROLL EFFECT ====================
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 80) {
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+});
+
+// ==================== MOBILE MENU ====================
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileLinks = document.querySelectorAll('.mobile-link');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  mobileMenu.classList.toggle('active');
+  document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+});
+
+mobileLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    mobileMenu.classList.remove('active');
+    document.body.style.overflow = '';
+  });
+});
+
+// ==================== CANVAS PARTICLES ====================
+const canvas = document.getElementById('particleCanvas');
+const ctx = canvas.getContext('2d');
+
+let particles = [];
+
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
+
+class Particle {
+  constructor() {
+    this.reset();
+  }
+
+  reset() {
+    this.x = Math.random() * canvas.width;
+    this.y = Math.random() * canvas.height;
+    this.size = Math.random() * 2 + 0.5;
+    this.speedX = (Math.random() - 0.5) * 0.3;
+    this.speedY = (Math.random() - 0.5) * 0.3 - 0.1;
+    this.opacity = Math.random() * 0.3 + 0.05;
+    this.glow = Math.random() * 15 + 5;
+    this.life = Math.random() * 200 + 100;
+    this.maxLife = this.life;
+  }
+
+  update() {
+    this.x += this.speedX;
+    this.y += this.speedY;
+    this.life--;
+
+    if (this.life <= 0 || this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) {
+      this.reset();
+    }
+  }
+
+  draw() {
+    const lifeRatio = this.life / this.maxLife;
+    const alpha = this.opacity * lifeRatio;
+
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(201, 150, 58, ${alpha})`;
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.size * this.glow, 0, Math.PI * 2);
+    const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size * this.glow);
+    gradient.addColorStop(0, `rgba(201, 150, 58, ${alpha * 0.2})`);
+    gradient.addColorStop(1, 'rgba(201, 150, 58, 0)');
+    ctx.fillStyle = gradient;
+    ctx.fill();
+  }
+}
+
+function initParticles() {
+  particles = [];
+  const particleCount = Math.min(80, Math.floor(canvas.width * canvas.height / 15000));
+  for (let i = 0; i < particleCount; i++) {
+    particles.push(new Particle());
+  }
+}
+
+function animateParticles() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  particles.forEach(p => {
+    p.update();
+    p.draw();
+  });
+
+  for (let i = 0; i < particles.length; i++) {
+    for (let j = i + 1; j < particles.length; j++) {
+      const dx = particles[i].x - particles[j].x;
+      const dy = particles[i].y - particles[j].y;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist < 100) {
+        const alpha = (1 - dist / 100) * 0.05;
+        ctx.beginPath();
+        ctx.moveTo(particles[i].x, particles[i].y);
+        ctx.lineTo(particles[j].x, particles[j].y);
+        ctx.strokeStyle = `rgba(201, 150, 58, ${alpha})`;
+        ctx.lineWidth = 0.5;
+        ctx.stroke();
+      }
+    }
+  }
+
+  requestAnimationFrame(animateParticles);
+}
+
+initParticles();
+animateParticles();
+
+// ==================== INTERSECTION OBSERVER — REVEAL ====================
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// ==================== FAQ ACCORDION ====================
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+  const question = item.querySelector('.faq-question');
+  question.addEventListener('click', () => {
+    const isActive = item.classList.contains('active');
+
+    faqItems.forEach(i => i.classList.remove('active'));
+
+    if (!isActive) {
+      item.classList.add('active');
+    }
+  });
+});
+</script>
+
+</body>
+</html>
