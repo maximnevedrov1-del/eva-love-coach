@@ -82,7 +82,7 @@ img{max-width:100%;display:block}
 
 /* ==================== HERO ==================== */
 .hero{position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden;background:var(--bg-primary)}
-.hero-bg{position:absolute;inset:0;background:url('./hero-bg.png') center/cover no-repeat;z-index:0}
+.hero-bg{position:absolute;inset:0;background:url('./hero-bg.jpg') center/cover no-repeat;z-index:0}
 .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(250,246,240,.95) 0%,rgba(250,246,240,.82) 50%,rgba(250,246,240,.92) 100%)}
 .hero-content{position:relative;z-index:2;display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:center;width:100%;max-width:1280px;margin:0 auto;padding:140px 32px 80px}
 .hero-label{font-size:11px;font-weight:600;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;display:block;opacity:0;transform:translateY(40px);animation:heroFadeIn .8s var(--transition-smooth) .2s forwards}
@@ -364,7 +364,7 @@ img{max-width:100%;display:block}
       </div>
     </div>
     <div class="hero-image-wrap">
-      <img src="./eva-photo.jpg" alt="Ева — русскоязычный психолог и сексолог, онлайн-консультации из любой страны" class="hero-image">
+      <img src="./eva-photo.jpg" alt="Ева — русскоязычный психолог и сексолог, онлайн-консультации из любой страны" class="hero-image" fetchpriority="high" decoding="async">
     </div>
   </div>
 </section>
@@ -522,7 +522,7 @@ img{max-width:100%;display:block}
     </div>
     <div class="why-grid">
       <div class="why-photo reveal">
-        <img src="./eva-photo.jpg" alt="Ева — дипломированный психолог и сексолог, онлайн-консультации на русском языке">
+        <img src="./eva-photo.jpg" alt="Ева — дипломированный психолог и сексолог, онлайн-консультации на русском языке" loading="lazy" decoding="async">
       </div>
       <ul class="why-list reveal stagger-1">
         <li>
